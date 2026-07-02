@@ -1,6 +1,12 @@
+import os
 import requests
 
-API_Key = 'd25b7dfc51bd5fa5e70d69997bcc6251'
+API_Key = os.environ.get('CURRENCY_API_KEY')
+
+if not API_Key:
+  print("Error: CURRENCY_API_KEY environment variable not set.")
+  exit(1)
+
 url = f'https://api.currencylayer.com/live?access_key={API_Key}'
 
 response = requests.get(url)
@@ -8,7 +14,7 @@ response = requests.get(url)
 
 data = response.json()
 
-print('Disclaimer starting value is in USD')
+print('*****Disclaimer starting value is in USD*****')
 print()
 
 amount = float(input("Enter the amount of USD you have: "))
