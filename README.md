@@ -1,5 +1,7 @@
 # Currency Exchange Converter
 
+[![Check Style](https://github.com/goasare/Currency-Exchange/actions/workflows/style.yaml/badge.svg)](https://github.com/goasare/Currency-Exchange/actions/workflows/style.yaml)
+
 A Python program that fetches live exchange rates from the CurrencyLayer API,
 stores them in a SQLite database, and converts an amount from USD into a
 currency of your choice.
